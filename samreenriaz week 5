@@ -1,0 +1,136 @@
+SAMREEN RIAZ 
+56329
+OOP LAB 5 (SE-2)
+MAAM NAVEERA
+
+TASK 1:
+CODE : 
+package playerr;
+/**
+ *
+ * @author Riphah
+ */
+class Playerr {
+    public String playerName;
+    public String position;
+  public Playerr (String playerName, String position) {
+        this.playerName = playerName;
+        this.position = position;
+    }
+ public void displayDetails() {
+        System.out.println("Player Name: " + playerName + ", Position: " + position);
+    }
+}class Team {
+    public Playerr p1;
+    public Playerr p2;
+    public Playerr p3;
+    public int count;
+   public Team() {
+        count = 0;
+    }
+   public void addPlayerr (Playerr player) {
+        if (count < 3) {
+            if (count == 0) p1 = player;
+            else if (count == 1) p2 = player;
+            else p3 = player;
+            count++;
+        } else {
+            System.out.println("Team is full. Cannot add more players.");
+        }
+    }
+public void displayPlayers() {
+        System.out.println("Team Players:");
+        if (p1 != null) p1.displayDetails();
+        if (p2 != null) p2.displayDetails();
+        if (p3 != null) p3.displayDetails();
+    }
+}
+public class Main  {
+    public static void main(String[] args) {
+       
+        Playerr player1 = new Playerr("salman", "Forward");
+        Playerr player2 = new Playerr("Ali", "Defender");
+        Playerr player3 = new Playerr("Hamza", "Goalkeeper");
+   Team team = new Team();
+ team.addPlayerr(player1);
+        team.addPlayerr(player2);
+        team.addPlayerr(player3);
+  team.displayPlayers();
+ team = null;
+System.out.println("Players after team deletion:");
+        player1.displayDetails();
+        player2.displayDetails();
+        player3.displayDetails();
+    }
+}
+
+
+ 
+
+TASK 2:
+CODE :
+class CPU {
+    public String brand;
+    public String capacity;
+
+    public CPU(String brand, String capacity) {
+        this.brand = brand;
+        this.capacity = capacity;
+    }
+}
+class RAM {
+    public String brand;
+    public String capacity;
+
+    public RAM(String brand, String capacity) {
+        this.brand = brand;
+        this.capacity = capacity;
+    }
+}
+class HardDrive {
+    public String brand;
+    public String capacity;
+
+    public HardDrive(String brand, String capacity) {
+        this.brand = brand;
+        this.capacity = capacity;
+    }
+}
+class Computer {
+    public CPU cpu;
+    public RAM ram;
+    public HardDrive hardDrive;
+
+    public Computer(CPU cpu, RAM ram, HardDrive hardDrive) {
+        this.cpu = cpu;
+        this.ram = ram;
+        this.hardDrive = hardDrive;
+    }
+
+    public void displayComponents() {
+        System.out.println("CPU Brand: " + cpu.brand + ", Capacity: " + cpu.capacity);
+        System.out.println("RAM Brand: " + ram.brand + ", Capacity: " + ram.capacity);
+        System.out.println("Hard Drive Brand: " + hardDrive.brand + ", Capacity: " + hardDrive.capacity);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+       
+        CPU cpu = new CPU("dell", "2.4 GHz");
+        RAM ram = new RAM("hp", "16 GB");
+        HardDrive hardDrive = new HardDrive("apple", "1 TB");
+
+       
+        Computer computer = new Computer(cpu, ram, hardDrive);
+
+        
+        computer.displayComponents();
+
+        
+        computer = null;
+
+        
+    }
+}
+
