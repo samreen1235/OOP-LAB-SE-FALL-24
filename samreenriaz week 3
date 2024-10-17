@@ -1,0 +1,128 @@
+SAMREEN RIAZ 
+56329
+OOP LAB 3 (SE-2)
+MAAM NAVEERA
+
+TASK 1:
+CODE : 
+/* * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */package javaarrays;
+/** * * @author Riphah */
+public class Javaarrays {  /**
+     * @param args the command line arguments
+     *\public static void main(String[] args) {
+        // TODO code application logic here
+        String[] myArray = {"Apple","Banana","Oranges","Grapes","Mango"};
+         for(int i = 0; i< myArray.length; i++){
+            System.out.println(myArray[i]);   }  }}
+SCREENSHOT
+ 
+TASK 2:
+CODE :
+package ConditionalStatements ;
+        public class ConditionalStatements {
+public static void main(String[] args) {
+        // TODO code application logic here
+        int num=3;
+        if(num%2==0){
+            System.out.println("The number is even");
+        }
+        else
+            if(num%2!=0){
+                System.out.println("The number is odd");
+            }}}
+
+ 
+
+TASK 3
+CODE :
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package whileloop;
+
+/**
+ *
+ * @author Riphah
+ */
+public class Whileloop {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here   public static void main(String[] args) {
+        // TODO code application logic here
+        int num=1;
+        while(num<=20){
+            if(num%2==0){
+                System.out.println(num);
+}   num++;
+}} }
+
+
+
+
+
+
+TASK 4
+CODE :
+public class RectanglePrinter {
+    public static void main(String[] args) {
+        // Number of rows and columns
+        int rows = 4;
+        int columns = 5;
+
+        // Outer loop for each row
+        for (int i = 0; i < rows; i++) {
+            // Inner loop for each column in the current row
+            for (int j = 0; j < columns; j++) {
+                // Print an asterisk followed by a space
+                System.out.print("* ");
+            }
+            // Print a newline after each row
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+TASK 5
+CODE :
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package multiplication;
+
+/**
+ *
+ * @author Riphah
+ */
+public class Multiplication {
+
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int num = 3; 
+        int factorial = 1; 
+        int i = 1; 
+
+        while (i <= num) { 
+            factorial *= i; 
+            i++; 
+        }
+
+        System.out.println("Factorial of " + num + " is " + factorial);
+    }
+    }
